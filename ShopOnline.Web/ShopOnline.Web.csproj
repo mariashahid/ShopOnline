@@ -1,0 +1,48 @@
+<Project Sdk="Microsoft.NET.Sdk.BlazorWebAssembly">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="GraphQLAPIClient\**" />
+    <Content Remove="GraphQLAPIClient\**" />
+    <EmbeddedResource Remove="GraphQLAPIClient\**" />
+    <GraphQL Remove="GraphQLAPIClient\**" />
+    <GraphQLConfig Remove="GraphQLAPIClient\**" />
+    <None Remove="GraphQLAPIClient\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Blazored.LocalStorage" Version="4.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="6.0.7" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="6.0.7" PrivateAssets="all" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="6.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Http" Version="6.0.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="Otp.Net" Version="1.2.2" />
+    <PackageReference Include="StrawberryShake.CodeGeneration.CSharp.Analyzers" Version="12.5.0" />
+    <PackageReference Include="StrawberryShake.Transport.Http" Version="12.5.0" />
+    <PackageReference Include="Syncfusion.Blazor.BarcodeGenerator" Version="20.2.0.50" />
+    <PackageReference Include="Syncfusion.Blazor.Popups" Version="20.2.0.45" />
+    <PackageReference Include="Syncfusion.Blazor.Themes" Version="20.2.0.45" />
+    <PackageReference Include="TwoFactorAuth.Net" Version="1.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ShopOnline.Models\ShopOnline.Models.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\lib\qrcodejs\.gitignore" />
+    <None Include="wwwroot\lib\qrcodejs\index.svg" />
+    <None Include="wwwroot\lib\qrcodejs\jquery.min.js" />
+    <None Include="wwwroot\lib\qrcodejs\LICENSE" />
+    <None Include="wwwroot\lib\qrcodejs\qrcode.js" />
+    <None Include="wwwroot\lib\qrcodejs\qrcode.min.js" />
+    <None Include="wwwroot\lib\qrcodejs\README.md" />
+  </ItemGroup>
+
+</Project>
